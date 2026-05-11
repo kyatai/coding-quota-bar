@@ -59,6 +59,10 @@ Target 说明：
 - **Mac 桌面版**：Electron + Vue 3 + TypeScript + electron-vite
 - **iOS / watchOS**：SwiftUI + WidgetKit + WatchConnectivity
 
+## 致谢
+
+实现参考 [coding-quota-bar](https://github.com/hyizhou/coding-quota-bar)。
+
 ## License
 
 MIT
