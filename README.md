@@ -52,7 +52,7 @@ Target 说明：
 - **CodingQuotaBarWatch** — watchOS 应用
 - **CodingQuotaBarWatchWidget** — watchOS 表盘小组件
 
-需要配置 App Group（`group.top.hyizhou.codingquotabar`）来共享数据。
+需要配置 App Group（`group.top.kyatai.codingquotabar`）来共享数据。
 
 ## 技术栈
 

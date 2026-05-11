@@ -109,3 +109,4 @@ Temporary Items
 
 # Claude settings
 .claude/
+.env

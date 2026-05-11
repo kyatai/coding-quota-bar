@@ -4,7 +4,7 @@
 <dict>
 	<key>com.apple.security.application-groups</key>
 	<array>
-		<string>group.top.hyizhou.codingquotabar</string>
+		<string>group.top.kyatai.codingquotabar</string>
 	</array>
 </dict>
 </plist>

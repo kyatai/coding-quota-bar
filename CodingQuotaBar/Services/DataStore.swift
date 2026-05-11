@@ -203,7 +203,7 @@ class DataStore: ObservableObject {
     // MARK: - Widget Data
 
     private func saveWidgetData(percent: Double, quotas: [WidgetQuotaItem]) {
-        let defaults = UserDefaults(suiteName: "group.top.hyizhou.codingquotabar")
+        let defaults = UserDefaults(suiteName: "group.top.kyatai.codingquotabar")
         defaults?.set(percent, forKey: "overallPercent")
         defaults?.set(Date().timeIntervalSince1970, forKey: "lastUpdate")
         if let data = try? JSONEncoder().encode(quotas) {

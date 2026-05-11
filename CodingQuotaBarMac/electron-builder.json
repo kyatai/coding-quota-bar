@@ -12,7 +12,7 @@
   ],
   "publish": {
     "provider": "github",
-    "owner": "hyizhou",
+    "owner": "kyatai",
     "repo": "coding-quota-bar"
   },
   "mac": {

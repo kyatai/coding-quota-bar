@@ -49,7 +49,7 @@ private struct WidgetAPILimit: Codable {
 // MARK: - Timeline Provider
 
 struct QuotaProvider: TimelineProvider {
-    private let appGroup = "group.top.hyizhou.codingquotabar"
+    private let appGroup = "group.top.kyatai.codingquotabar"
 
     func placeholder(in context: Context) -> QuotaEntry {
         QuotaEntry(date: Date(), overallPercent: 75, quotas: [

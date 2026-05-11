@@ -24,7 +24,7 @@
     "vue-tsc": "^3.2.6"
   },
   "build": {
-    "appId": "top.hyizhou.codingquotabar",
+    "appId": "top.kyatai.codingquotabar",
     "productName": "Coding Quota Bar",
     "copyright": "Copyright © 2026 coding-quota-bar-team",
     "electronLanguages": [

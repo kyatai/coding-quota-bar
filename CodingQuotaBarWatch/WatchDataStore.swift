@@ -21,7 +21,7 @@ class WatchDataStore: NSObject, ObservableObject {
     @Published var error: String?
     @Published var lastUpdate: Date?
 
-    @AppStorage("watchApiKey", store: UserDefaults(suiteName: "group.top.hyizhou.codingquotabar"))
+    @AppStorage("watchApiKey", store: UserDefaults(suiteName: "group.top.kyatai.codingquotabar"))
     var apiKey: String = "" {
         didSet {
             if !apiKey.isEmpty {
@@ -30,7 +30,7 @@ class WatchDataStore: NSObject, ObservableObject {
         }
     }
 
-    static let appGroup = "group.top.hyizhou.codingquotabar"
+    static let appGroup = "group.top.kyatai.codingquotabar"
 
     var tokenPercent: Double {
         let tokens = quotas.filter { $0.limitType == "tokens" }
