@@ -61,7 +61,7 @@ Target 说明：
 
 ## 致谢
 
-本项目参考自 [coding-quota-bar](https://github.com/hyizhou/coding-quota-bar)（Windows 原版），在其基础上重写了 macOS / iOS / watchOS 客户端。
+本项目参考自 [coding-quota-bar](https://github.com/hyizhou/coding-quota-bar)（Windows 原版），在其基础上重写了 macOS / iOS / watchOS 客户端。完全 Vibe Coding，包括 git 操作。
 
 ## License
 
