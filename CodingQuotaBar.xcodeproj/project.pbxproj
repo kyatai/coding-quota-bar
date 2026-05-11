@@ -1,0 +1,910 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0821746C9C167D60CEF7CB3B /* Formatters.swift in Sources */ = {isa = PBXBuildFile; fileRef = E31E7928B9943C2769823212 /* Formatters.swift */; };
+		0C6F0C0789440ED9A6A1F6E7 /* ConfigManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B130664DAA728AB357477F54 /* ConfigManager.swift */; };
+		13E5AB8BDA950A1B5728B3B3 /* TokenChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 494772EC7B77C9513EA021BD /* TokenChartView.swift */; };
+		183B0D6F1E54A5D8E3E50BA3 /* WatchSyncManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19763B628A6FF59386BA8EC4 /* WatchSyncManager.swift */; };
+		1CF70E75DC5EB7A7D707C977 /* QuotaWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12BC3443E07A0248EF93A6B0 /* QuotaWidget.swift */; };
+		20CF1221C5E684A8B216FE4D /* HttpClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62545FCC7D6D8CF973FAE008 /* HttpClient.swift */; };
+		3EC56B31EB103871F42D7FD4 /* CodingQuotaBarApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85F5515732160C81F8E73A88 /* CodingQuotaBarApp.swift */; };
+		40B605DAA71E114D0C15A143 /* CodingQuotaBarWatchApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1AAD050AECDDEBD1BBC925A /* CodingQuotaBarWatchApp.swift */; };
+		5763CB00B5FD270A94BBA957 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 910929C5DB09E16012868068 /* SettingsView.swift */; };
+		69D42B691C2CD302B39DA955 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDFC5AB64A4060AD59C24A7F /* MainView.swift */; };
+		73D24880C7E666B83AFBB258 /* CodingQuotaBarWatch.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = A4DB36EC3B2DA34D018BEDB7 /* CodingQuotaBarWatch.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		76811BCDDCDA7390E39D0D0C /* ZhipuProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2DA34630FC919B877D715E7 /* ZhipuProvider.swift */; };
+		7B199C8C0C8204A12722FDF4 /* DataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B23DE11D07CA2C4A39827C8 /* DataStore.swift */; };
+		804E0F5A65FF99F42D005000 /* CodingQuotaBarWidget.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 447AB2C8D9F97ECD8F610C68 /* CodingQuotaBarWidget.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		8977DF405BF7CB9BB70D063E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B42D75776BD798510AAEF92D /* ContentView.swift */; };
+		90C057FD2F9767D3003EC05E /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90C057FC2F9767D3003EC05E /* WidgetKit.framework */; };
+		90C057FF2F9767D3003EC05E /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90C057FE2F9767D3003EC05E /* SwiftUI.framework */; };
+		90C0580A2F9767D4003EC05E /* CodingQuotaBarWatchWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 90C057FA2F9767D3003EC05E /* CodingQuotaBarWatchWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		95332D5ED47A454576D0C411 /* UsageStatsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA61C52CF26FC6718DAF6C81 /* UsageStatsView.swift */; };
+		9611EF146DB5017FAE0A7A42 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C137B820D98C2A6B091EF1DE /* Assets.xcassets */; };
+		989AA3263472750B345A3316 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC77F40552C928F95DFBBF68 /* Assets.xcassets */; };
+		9EA7EAC2255932A8A6AB8A2C /* ZhipuWatchService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D80F5704C432078A661D7D9 /* ZhipuWatchService.swift */; };
+		A5C28D9830B92BEECE2925AA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E1881A9832B5B24441212921 /* Assets.xcassets */; };
+		B696816E362670003C2C7716 /* Types.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05D08F4F68A105974AB1F37A /* Types.swift */; };
+		CD2969A70B4B65E1745200C1 /* WatchDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F4ED6ACD6ADA181D7707A54 /* WatchDataStore.swift */; };
+		CED7E1610857981AB5B41A99 /* QuotaCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F76509407CE6B636A423FD4 /* QuotaCardView.swift */; };
+		DBBCFCCBA9AAAF18E0F7E1E7 /* McpChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AC270C45970A5F186BB899D /* McpChartView.swift */; };
+		ED29025E84878228560BC4E1 /* ApiTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = A403AC7B4A8975D74E6733D6 /* ApiTypes.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		4F9612DFEE8A77F5844865E3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5F0462CC26AB121D554BD5B5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4FE777D835C0117FC23CAEC7;
+			remoteInfo = CodingQuotaBarWidget;
+		};
+		90C058082F9767D4003EC05E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5F0462CC26AB121D554BD5B5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 90C057F92F9767D3003EC05E;
+			remoteInfo = CodingQuotaBarWatchWidgetExtension;
+		};
+		F949DE00A9EB24F02A703F71 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5F0462CC26AB121D554BD5B5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EBF4FADCCBD176C7C9C868F3;
+			remoteInfo = CodingQuotaBarWatch;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		7BC050C9574CFC8C4E7F385B /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				73D24880C7E666B83AFBB258 /* CodingQuotaBarWatch.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		833AC6F9D7BFC7B86A764E68 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				804E0F5A65FF99F42D005000 /* CodingQuotaBarWidget.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		90C0580F2F9767D4003EC05E /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				90C0580A2F9767D4003EC05E /* CodingQuotaBarWatchWidgetExtension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		05D08F4F68A105974AB1F37A /* Types.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Types.swift; sourceTree = "<group>"; };
+		0F4ED6ACD6ADA181D7707A54 /* WatchDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchDataStore.swift; sourceTree = "<group>"; };
+		12BC3443E07A0248EF93A6B0 /* QuotaWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuotaWidget.swift; sourceTree = "<group>"; };
+		19763B628A6FF59386BA8EC4 /* WatchSyncManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchSyncManager.swift; sourceTree = "<group>"; };
+		447AB2C8D9F97ECD8F610C68 /* CodingQuotaBarWidget.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = CodingQuotaBarWidget.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		494772EC7B77C9513EA021BD /* TokenChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenChartView.swift; sourceTree = "<group>"; };
+		4F76509407CE6B636A423FD4 /* QuotaCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuotaCardView.swift; sourceTree = "<group>"; };
+		5436284D98D8024747A93C26 /* CodingQuotaBarWatch.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CodingQuotaBarWatch.entitlements; sourceTree = "<group>"; };
+		5D80F5704C432078A661D7D9 /* ZhipuWatchService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZhipuWatchService.swift; sourceTree = "<group>"; };
+		62545FCC7D6D8CF973FAE008 /* HttpClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpClient.swift; sourceTree = "<group>"; };
+		71666875DAEF6C42B5C13AAA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		787CCB9152A3A140DD33B340 /* CodingQuotaBar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CodingQuotaBar.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		85F5515732160C81F8E73A88 /* CodingQuotaBarApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodingQuotaBarApp.swift; sourceTree = "<group>"; };
+		8AC270C45970A5F186BB899D /* McpChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = McpChartView.swift; sourceTree = "<group>"; };
+		8B23DE11D07CA2C4A39827C8 /* DataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStore.swift; sourceTree = "<group>"; };
+		8E38DB637D47AEDE2C8DFADE /* CodingQuotaBar.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CodingQuotaBar.entitlements; sourceTree = "<group>"; };
+		90C057FA2F9767D3003EC05E /* CodingQuotaBarWatchWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = CodingQuotaBarWatchWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		90C057FC2F9767D3003EC05E /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		90C057FE2F9767D3003EC05E /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		90C058102F9769A8003EC05E /* CodingQuotaBarWatchWidgetExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CodingQuotaBarWatchWidgetExtension.entitlements; sourceTree = "<group>"; };
+		910929C5DB09E16012868068 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		A403AC7B4A8975D74E6733D6 /* ApiTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiTypes.swift; sourceTree = "<group>"; };
+		A4DB36EC3B2DA34D018BEDB7 /* CodingQuotaBarWatch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CodingQuotaBarWatch.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AC77F40552C928F95DFBBF68 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B130664DAA728AB357477F54 /* ConfigManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigManager.swift; sourceTree = "<group>"; };
+		B42D75776BD798510AAEF92D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		BDFC5AB64A4060AD59C24A7F /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		C137B820D98C2A6B091EF1DE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C221176877B02A3ADF780B81 /* CodingQuotaBarWidget.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CodingQuotaBarWidget.entitlements; sourceTree = "<group>"; };
+		C88FAC66BAA8C358C09FDA76 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		CF2A547C84E33B8D4A657408 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		DA61C52CF26FC6718DAF6C81 /* UsageStatsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsageStatsView.swift; sourceTree = "<group>"; };
+		E1881A9832B5B24441212921 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		E1AAD050AECDDEBD1BBC925A /* CodingQuotaBarWatchApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodingQuotaBarWatchApp.swift; sourceTree = "<group>"; };
+		E31E7928B9943C2769823212 /* Formatters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Formatters.swift; sourceTree = "<group>"; };
+		F2DA34630FC919B877D715E7 /* ZhipuProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZhipuProvider.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		90C0580B2F9767D4003EC05E /* Exceptions for "CodingQuotaBarWatchWidget" folder in "CodingQuotaBarWatchWidgetExtension" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 90C057F92F9767D3003EC05E /* CodingQuotaBarWatchWidgetExtension */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		90C058002F9767D3003EC05E /* CodingQuotaBarWatchWidget */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				90C0580B2F9767D4003EC05E /* Exceptions for "CodingQuotaBarWatchWidget" folder in "CodingQuotaBarWatchWidgetExtension" target */,
+			);
+			path = CodingQuotaBarWatchWidget;
+			sourceTree = "<group>";
+		};
+/* End PBXFileSystemSynchronizedRootGroup section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		90C057F72F9767D3003EC05E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				90C057FF2F9767D3003EC05E /* SwiftUI.framework in Frameworks */,
+				90C057FD2F9767D3003EC05E /* WidgetKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		26A60A77D42418B0B6D9267D /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				8AC270C45970A5F186BB899D /* McpChartView.swift */,
+				4F76509407CE6B636A423FD4 /* QuotaCardView.swift */,
+				494772EC7B77C9513EA021BD /* TokenChartView.swift */,
+				DA61C52CF26FC6718DAF6C81 /* UsageStatsView.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		5FEC1C2C896A7B456BE84289 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				B130664DAA728AB357477F54 /* ConfigManager.swift */,
+				8B23DE11D07CA2C4A39827C8 /* DataStore.swift */,
+				62545FCC7D6D8CF973FAE008 /* HttpClient.swift */,
+				19763B628A6FF59386BA8EC4 /* WatchSyncManager.swift */,
+				F2DA34630FC919B877D715E7 /* ZhipuProvider.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		6A343499EE9CD53981E2F6B8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				787CCB9152A3A140DD33B340 /* CodingQuotaBar.app */,
+				A4DB36EC3B2DA34D018BEDB7 /* CodingQuotaBarWatch.app */,
+				447AB2C8D9F97ECD8F610C68 /* CodingQuotaBarWidget.appex */,
+				90C057FA2F9767D3003EC05E /* CodingQuotaBarWatchWidgetExtension.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		79E915C6CB3AB3275C791DE9 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				A403AC7B4A8975D74E6733D6 /* ApiTypes.swift */,
+				05D08F4F68A105974AB1F37A /* Types.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		9039420A90E4EBEA706EEB0D /* CodingQuotaBarWatch */ = {
+			isa = PBXGroup;
+			children = (
+				E1881A9832B5B24441212921 /* Assets.xcassets */,
+				5436284D98D8024747A93C26 /* CodingQuotaBarWatch.entitlements */,
+				E1AAD050AECDDEBD1BBC925A /* CodingQuotaBarWatchApp.swift */,
+				B42D75776BD798510AAEF92D /* ContentView.swift */,
+				C88FAC66BAA8C358C09FDA76 /* Info.plist */,
+				0F4ED6ACD6ADA181D7707A54 /* WatchDataStore.swift */,
+				5D80F5704C432078A661D7D9 /* ZhipuWatchService.swift */,
+			);
+			path = CodingQuotaBarWatch;
+			sourceTree = "<group>";
+		};
+		90C057FB2F9767D3003EC05E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				90C057FC2F9767D3003EC05E /* WidgetKit.framework */,
+				90C057FE2F9767D3003EC05E /* SwiftUI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9732744E02D3AFDEF785CA02 /* CodingQuotaBar */ = {
+			isa = PBXGroup;
+			children = (
+				AC77F40552C928F95DFBBF68 /* Assets.xcassets */,
+				8E38DB637D47AEDE2C8DFADE /* CodingQuotaBar.entitlements */,
+				85F5515732160C81F8E73A88 /* CodingQuotaBarApp.swift */,
+				71666875DAEF6C42B5C13AAA /* Info.plist */,
+				BC20D4316BB0D347BE7127E5 /* Helpers */,
+				79E915C6CB3AB3275C791DE9 /* Models */,
+				5FEC1C2C896A7B456BE84289 /* Services */,
+				E5883CBD3A8C4A48E28EDE9B /* Views */,
+			);
+			path = CodingQuotaBar;
+			sourceTree = "<group>";
+		};
+		BAE6B19ABC8D30641137F380 = {
+			isa = PBXGroup;
+			children = (
+				90C058102F9769A8003EC05E /* CodingQuotaBarWatchWidgetExtension.entitlements */,
+				9732744E02D3AFDEF785CA02 /* CodingQuotaBar */,
+				9039420A90E4EBEA706EEB0D /* CodingQuotaBarWatch */,
+				BF427864EF6EB578BC6BD752 /* CodingQuotaBarWidget */,
+				90C058002F9767D3003EC05E /* CodingQuotaBarWatchWidget */,
+				90C057FB2F9767D3003EC05E /* Frameworks */,
+				6A343499EE9CD53981E2F6B8 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		BC20D4316BB0D347BE7127E5 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				E31E7928B9943C2769823212 /* Formatters.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		BF427864EF6EB578BC6BD752 /* CodingQuotaBarWidget */ = {
+			isa = PBXGroup;
+			children = (
+				C137B820D98C2A6B091EF1DE /* Assets.xcassets */,
+				C221176877B02A3ADF780B81 /* CodingQuotaBarWidget.entitlements */,
+				CF2A547C84E33B8D4A657408 /* Info.plist */,
+				12BC3443E07A0248EF93A6B0 /* QuotaWidget.swift */,
+			);
+			path = CodingQuotaBarWidget;
+			sourceTree = "<group>";
+		};
+		E5883CBD3A8C4A48E28EDE9B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				BDFC5AB64A4060AD59C24A7F /* MainView.swift */,
+				910929C5DB09E16012868068 /* SettingsView.swift */,
+				26A60A77D42418B0B6D9267D /* Components */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		0FE82E5BD78061AE13CEBA63 /* CodingQuotaBar */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D83B8109CDD3292910D1DAA8 /* Build configuration list for PBXNativeTarget "CodingQuotaBar" */;
+			buildPhases = (
+				B8FF9348472DC802C445704C /* Sources */,
+				98FF6B734CD23C846FC8078B /* Resources */,
+				833AC6F9D7BFC7B86A764E68 /* Embed Foundation Extensions */,
+				7BC050C9574CFC8C4E7F385B /* Embed Watch Content */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9CB5075AFF646D4F5F236137 /* PBXTargetDependency */,
+				98896734073497BB7ED4B562 /* PBXTargetDependency */,
+			);
+			name = CodingQuotaBar;
+			packageProductDependencies = (
+			);
+			productName = CodingQuotaBar;
+			productReference = 787CCB9152A3A140DD33B340 /* CodingQuotaBar.app */;
+			productType = "com.apple.product-type.application";
+		};
+		4FE777D835C0117FC23CAEC7 /* CodingQuotaBarWidget */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E9BB932871FDD55CEEC37011 /* Build configuration list for PBXNativeTarget "CodingQuotaBarWidget" */;
+			buildPhases = (
+				841B119DE1728D4D8415BE1B /* Sources */,
+				015811B782C9A7A8953B4718 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CodingQuotaBarWidget;
+			packageProductDependencies = (
+			);
+			productName = CodingQuotaBarWidget;
+			productReference = 447AB2C8D9F97ECD8F610C68 /* CodingQuotaBarWidget.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+		90C057F92F9767D3003EC05E /* CodingQuotaBarWatchWidgetExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 90C0580C2F9767D4003EC05E /* Build configuration list for PBXNativeTarget "CodingQuotaBarWatchWidgetExtension" */;
+			buildPhases = (
+				90C057F62F9767D3003EC05E /* Sources */,
+				90C057F72F9767D3003EC05E /* Frameworks */,
+				90C057F82F9767D3003EC05E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				90C058002F9767D3003EC05E /* CodingQuotaBarWatchWidget */,
+			);
+			name = CodingQuotaBarWatchWidgetExtension;
+			packageProductDependencies = (
+			);
+			productName = CodingQuotaBarWatchWidgetExtension;
+			productReference = 90C057FA2F9767D3003EC05E /* CodingQuotaBarWatchWidgetExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+		EBF4FADCCBD176C7C9C868F3 /* CodingQuotaBarWatch */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F95A844F84F4D836B437B59A /* Build configuration list for PBXNativeTarget "CodingQuotaBarWatch" */;
+			buildPhases = (
+				AD4FEF498545B2944D7D35FF /* Sources */,
+				2D7975E04E66BD43E2092799 /* Resources */,
+				90C0580F2F9767D4003EC05E /* Embed Foundation Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				90C058092F9767D4003EC05E /* PBXTargetDependency */,
+			);
+			name = CodingQuotaBarWatch;
+			packageProductDependencies = (
+			);
+			productName = CodingQuotaBarWatch;
+			productReference = A4DB36EC3B2DA34D018BEDB7 /* CodingQuotaBarWatch.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		5F0462CC26AB121D554BD5B5 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastSwiftUpdateCheck = 2640;
+				LastUpgradeCheck = 1600;
+				TargetAttributes = {
+					0FE82E5BD78061AE13CEBA63 = {
+						ProvisioningStyle = Automatic;
+					};
+					4FE777D835C0117FC23CAEC7 = {
+						ProvisioningStyle = Automatic;
+					};
+					90C057F92F9767D3003EC05E = {
+						CreatedOnToolsVersion = 26.4;
+					};
+					EBF4FADCCBD176C7C9C868F3 = {
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 4711A022F4417126DB771E7D /* Build configuration list for PBXProject "CodingQuotaBar" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = BAE6B19ABC8D30641137F380;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 6A343499EE9CD53981E2F6B8 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				0FE82E5BD78061AE13CEBA63 /* CodingQuotaBar */,
+				EBF4FADCCBD176C7C9C868F3 /* CodingQuotaBarWatch */,
+				4FE777D835C0117FC23CAEC7 /* CodingQuotaBarWidget */,
+				90C057F92F9767D3003EC05E /* CodingQuotaBarWatchWidgetExtension */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		015811B782C9A7A8953B4718 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9611EF146DB5017FAE0A7A42 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2D7975E04E66BD43E2092799 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A5C28D9830B92BEECE2925AA /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		90C057F82F9767D3003EC05E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		98FF6B734CD23C846FC8078B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				989AA3263472750B345A3316 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		841B119DE1728D4D8415BE1B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1CF70E75DC5EB7A7D707C977 /* QuotaWidget.swift in Sources */,
+			);
+			excludedSourceFiles = (
+				"QuotaWidget.swift",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		90C057F62F9767D3003EC05E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AD4FEF498545B2944D7D35FF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				40B605DAA71E114D0C15A143 /* CodingQuotaBarWatchApp.swift in Sources */,
+				8977DF405BF7CB9BB70D063E /* ContentView.swift in Sources */,
+				CD2969A70B4B65E1745200C1 /* WatchDataStore.swift in Sources */,
+				9EA7EAC2255932A8A6AB8A2C /* ZhipuWatchService.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B8FF9348472DC802C445704C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ED29025E84878228560BC4E1 /* ApiTypes.swift in Sources */,
+				3EC56B31EB103871F42D7FD4 /* CodingQuotaBarApp.swift in Sources */,
+				0C6F0C0789440ED9A6A1F6E7 /* ConfigManager.swift in Sources */,
+				7B199C8C0C8204A12722FDF4 /* DataStore.swift in Sources */,
+				0821746C9C167D60CEF7CB3B /* Formatters.swift in Sources */,
+				20CF1221C5E684A8B216FE4D /* HttpClient.swift in Sources */,
+				69D42B691C2CD302B39DA955 /* MainView.swift in Sources */,
+				DBBCFCCBA9AAAF18E0F7E1E7 /* McpChartView.swift in Sources */,
+				CED7E1610857981AB5B41A99 /* QuotaCardView.swift in Sources */,
+				5763CB00B5FD270A94BBA957 /* SettingsView.swift in Sources */,
+				13E5AB8BDA950A1B5728B3B3 /* TokenChartView.swift in Sources */,
+				B696816E362670003C2C7716 /* Types.swift in Sources */,
+				95332D5ED47A454576D0C411 /* UsageStatsView.swift in Sources */,
+				183B0D6F1E54A5D8E3E50BA3 /* WatchSyncManager.swift in Sources */,
+				76811BCDDCDA7390E39D0D0C /* ZhipuProvider.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		90C058092F9767D4003EC05E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 90C057F92F9767D3003EC05E /* CodingQuotaBarWatchWidgetExtension */;
+			targetProxy = 90C058082F9767D4003EC05E /* PBXContainerItemProxy */;
+		};
+		98896734073497BB7ED4B562 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EBF4FADCCBD176C7C9C868F3 /* CodingQuotaBarWatch */;
+			targetProxy = F949DE00A9EB24F02A703F71 /* PBXContainerItemProxy */;
+		};
+		9CB5075AFF646D4F5F236137 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4FE777D835C0117FC23CAEC7 /* CodingQuotaBarWidget */;
+			targetProxy = 4F9612DFEE8A77F5844865E3 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		34F6EAD8D30DB397037E0BE9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CODE_SIGN_ENTITLEMENTS = CodingQuotaBarWidget/CodingQuotaBarWidget.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4RFF2VFX5E;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = CodingQuotaBarWidget/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = top.hyizhou.codingquotabar.widget;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		4160701AC9954E00A340EE2B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = CodingQuotaBar/CodingQuotaBar.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4RFF2VFX5E;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = CodingQuotaBar/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = top.hyizhou.codingquotabar;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		445BE6109BCCA71291D16CDC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = CodingQuotaBar/CodingQuotaBar.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4RFF2VFX5E;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = CodingQuotaBar/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = top.hyizhou.codingquotabar;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		5AC484E1CFEC4F0EAC98D800 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.9;
+			};
+			name = Release;
+		};
+		7A1C60F704E253D548BE219C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = CodingQuotaBarWatch/CodingQuotaBarWatch.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4RFF2VFX5E;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = CodingQuotaBarWatch/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../../Frameworks",
+					"@executable_path/../../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = top.hyizhou.codingquotabar.watchapp;
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 10.0;
+			};
+			name = Release;
+		};
+		7C7299C2AC04902AB142DCB6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = CodingQuotaBarWatch/CodingQuotaBarWatch.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4RFF2VFX5E;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = CodingQuotaBarWatch/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../../Frameworks",
+					"@executable_path/../../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = top.hyizhou.codingquotabar.watchapp;
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 10.0;
+			};
+			name = Debug;
+		};
+		7C9ADBAE440C50D1247BB995 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CODE_SIGN_ENTITLEMENTS = CodingQuotaBarWidget/CodingQuotaBarWidget.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4RFF2VFX5E;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = CodingQuotaBarWidget/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = top.hyizhou.codingquotabar.widget;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		8FA60FD8B79F7885069F33F3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"DEBUG=1",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.9;
+			};
+			name = Debug;
+		};
+		90C0580D2F9767D4003EC05E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CODE_SIGN_ENTITLEMENTS = CodingQuotaBarWatchWidgetExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 4RFF2VFX5E;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = CodingQuotaBarWatchWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = CodingQuotaBarWatchWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MARKETING_VERSION = 1.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = top.hyizhou.codingquotabar.watchapp.CodingQuotaBarWatchWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 10.0;
+			};
+			name = Debug;
+		};
+		90C0580E2F9767D4003EC05E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CODE_SIGN_ENTITLEMENTS = CodingQuotaBarWatchWidgetExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 4RFF2VFX5E;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = CodingQuotaBarWatchWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = CodingQuotaBarWatchWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MARKETING_VERSION = 1.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = top.hyizhou.codingquotabar.watchapp.CodingQuotaBarWatchWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				VALIDATE_PRODUCT = YES;
+				WATCHOS_DEPLOYMENT_TARGET = 10.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4711A022F4417126DB771E7D /* Build configuration list for PBXProject "CodingQuotaBar" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8FA60FD8B79F7885069F33F3 /* Debug */,
+				5AC484E1CFEC4F0EAC98D800 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		90C0580C2F9767D4003EC05E /* Build configuration list for PBXNativeTarget "CodingQuotaBarWatchWidgetExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				90C0580D2F9767D4003EC05E /* Debug */,
+				90C0580E2F9767D4003EC05E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		D83B8109CDD3292910D1DAA8 /* Build configuration list for PBXNativeTarget "CodingQuotaBar" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				445BE6109BCCA71291D16CDC /* Debug */,
+				4160701AC9954E00A340EE2B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		E9BB932871FDD55CEEC37011 /* Build configuration list for PBXNativeTarget "CodingQuotaBarWidget" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7C9ADBAE440C50D1247BB995 /* Debug */,
+				34F6EAD8D30DB397037E0BE9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		F95A844F84F4D836B437B59A /* Build configuration list for PBXNativeTarget "CodingQuotaBarWatch" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7C7299C2AC04902AB142DCB6 /* Debug */,
+				7A1C60F704E253D548BE219C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 5F0462CC26AB121D554BD5B5 /* Project object */;
+}
