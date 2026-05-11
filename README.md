@@ -16,13 +16,17 @@
 
 ## 各端长什么样
 
+**iOS**——主应用和桌面小组件：
+
+![iOS](assets/screenshot-ios.jpg)
+
 **macOS 菜单栏**——常驻右上角，点开看详情，有图表：
 
 ![macOS](assets/screenshot-mac.png)
 
 **Apple Watch**——表盘 complication 直接显示用量百分比，打开 app 看详情：
 
-![Watch](assets/screenshot-watch.png)
+![Watch](assets/screenshot-watch.jpg)
 
 ## 怎么跑起来
 
