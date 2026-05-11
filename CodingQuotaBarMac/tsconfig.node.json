@@ -1,0 +1,1 @@
+{ "compilerOptions": { "composite": true, "target": "ES2022", "module": "ESNext", "moduleResolution": "bundler", "strict": true, "esModuleInterop": true, "skipLibCheck": true, "resolveJsonModule": true, "isolatedModules": true, "noEmit": true }, "include": ["src/main/**/*", "src/preload/**/*", "src/providers/**/*", "src/shared/**/*", "app.build.ts"] }

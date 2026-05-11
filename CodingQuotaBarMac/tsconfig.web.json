@@ -1,0 +1,1 @@
+{ "compilerOptions": { "composite": true, "target": "ES2022", "module": "ESNext", "moduleResolution": "bundler", "strict": true, "jsx": "preserve", "esModuleInterop": true, "skipLibCheck": true, "resolveJsonModule": true, "isolatedModules": true, "noEmit": true, "paths": { "@/*": ["./src/*"] } }, "include": ["src/renderer/**/*", "src/shared/**/*"] }

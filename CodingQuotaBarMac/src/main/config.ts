@@ -1,0 +1,175 @@
+import { promises as fs } from 'node:fs';
+import * as fsSync from 'node:fs';
+import * as path from 'node:path';
+import { app, safeStorage } from 'electron';
+import type { AppConfig, ProviderConfig } from '../shared/types';
+import { getAvailableProviderKeys } from './loader';
+import { EventEmitter } from 'events';
+
+export class ConfigManager extends EventEmitter {
+  private configPath: string;
+  private config: AppConfig | null = null;
+  private watcher: fsSync.FSWatcher | null = null;
+  private ignoreNextChange = false;
+
+  constructor() {
+    super();
+    const userDataPath = app.getPath('userData');
+    this.configPath = path.join(userDataPath, 'config.json');
+  }
+
+  async initialize(): Promise<AppConfig> {
+    const userDataPath = app.getPath('userData');
+    try {
+      await fs.mkdir(userDataPath, { recursive: true });
+    } catch (error) {
+      console.error('[Config] Failed to create userData directory:', error);
+    }
+
+    try {
+      await this.load();
+      console.log('[Config] Loaded configuration from', this.configPath);
+    } catch (error) {
+      console.log('[Config] No existing config found, creating default');
+      await this.createDefaultConfig();
+    }
+
+    this.watch();
+    return this.config!;
+  }
+
+  private encryptApiKey(key: string): string {
+    if (!key || !safeStorage.isEncryptionAvailable()) return key;
+    const encrypted = safeStorage.encryptString(key);
+    return 'enc:' + encrypted.toString('base64');
+  }
+
+  private decryptApiKey(encrypted: string): string {
+    if (!encrypted || !encrypted.startsWith('enc:')) return encrypted;
+    try {
+      const buffer = Buffer.from(encrypted.slice(4), 'base64');
+      return safeStorage.decryptString(buffer);
+    } catch {
+      console.warn('[Config] Failed to decrypt apiKey, returning as-is');
+      return encrypted;
+    }
+  }
+
+  private encryptApiKeys(config: AppConfig): AppConfig {
+    const encrypted = structuredClone(config);
+    for (const provider of Object.values(encrypted.providers)) {
+      if (provider.apiKey) provider.apiKey = this.encryptApiKey(provider.apiKey);
+    }
+    return encrypted;
+  }
+
+  private decryptApiKeys(config: AppConfig): AppConfig {
+    for (const provider of Object.values(config.providers)) {
+      if (provider.apiKey) provider.apiKey = this.decryptApiKey(provider.apiKey);
+    }
+    return config;
+  }
+
+  private async load(): Promise<AppConfig> {
+    try {
+      const content = await fs.readFile(this.configPath, 'utf-8');
+      const raw = JSON.parse(content) as AppConfig;
+      this.config = this.decryptApiKeys(raw);
+
+      let migrated = false;
+      for (const key of getAvailableProviderKeys()) {
+        if (!this.config.providers[key]) {
+          this.config.providers[key] = { enabled: false, apiKey: '' };
+          migrated = true;
+        }
+      }
+      if (migrated) await this.save(this.config);
+
+      this.emit('loaded', this.config);
+      return this.config;
+    } catch (error) {
+      throw new Error(`Failed to load config from ${this.configPath}: ${error}`);
+    }
+  }
+
+  async save(config: AppConfig): Promise<void> {
+    try {
+      this.ignoreNextChange = true;
+      const oldConfig = this.config;
+      this.config = config;
+      const toWrite = this.encryptApiKeys(config);
+      const content = JSON.stringify(toWrite, null, 2);
+      await fs.writeFile(this.configPath, content, 'utf-8');
+      this.emit('saved', config);
+      this.emit('changed', config, oldConfig);
+    } catch (error) {
+      this.ignoreNextChange = false;
+      throw error;
+    }
+  }
+
+  private async createDefaultConfig(): Promise<void> {
+    const providers: Record<string, ProviderConfig> = {};
+    for (const key of getAvailableProviderKeys()) {
+      providers[key] = { enabled: false, apiKey: '' };
+    }
+    const defaultConfig: AppConfig = {
+      refreshInterval: 300,
+      providers,
+      display: { colorThresholds: { green: 50, yellow: 20 } },
+      autoStart: false,
+      language: 'zh-CN',
+      theme: 'auto'
+    };
+    await this.save(defaultConfig);
+  }
+
+  getConfig(): AppConfig | null { return this.config; }
+
+  async updateConfig(updates: Partial<AppConfig>): Promise<void> {
+    if (!this.config) throw new Error('Config not initialized');
+    const mergedProviders = { ...this.config.providers };
+    if (updates.providers) {
+      for (const [key, value] of Object.entries(updates.providers)) {
+        mergedProviders[key] = { ...mergedProviders[key], ...value };
+      }
+    }
+    const newConfig: AppConfig = {
+      ...this.config,
+      ...updates,
+      providers: mergedProviders,
+      display: {
+        ...this.config.display,
+        ...updates.display,
+        colorThresholds: { ...this.config.display.colorThresholds, ...updates.display?.colorThresholds }
+      }
+    };
+    await this.save(newConfig);
+  }
+
+  private watch(): void {
+    try {
+      this.watcher = fsSync.watch(this.configPath, { persistent: false }, (eventType) => {
+        if (eventType === 'change') {
+          setTimeout(async () => {
+            if (this.ignoreNextChange) { this.ignoreNextChange = false; return; }
+            try {
+              const old = this.config;
+              await this.load();
+              this.emit('changed', this.config, old);
+            } catch (error) {
+              console.error('[Config] Failed to reload config:', error);
+            }
+          }, 100);
+        }
+      });
+    } catch (error) {
+      console.warn('[Config] Failed to watch config file:', error);
+    }
+  }
+
+  destroy(): void {
+    if (this.watcher) { this.watcher.close(); this.watcher = null; }
+    this.removeAllListeners();
+  }
+}
